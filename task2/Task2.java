@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Task2 {
     public static void main(String[] args) {
         if (args.length != 2) {
-            System.err.println("Incorrect number of args.Usage: java CirclePositionCalculator <circle_file> <points_file>");
+            System.err.println("Incorrect number of args.Usage: java Task2.java <circle_file> <points_file>");
             return;
         }
 
