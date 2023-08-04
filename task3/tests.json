@@ -1,0 +1,63 @@
+{
+  "tests": [{
+    "id": 2,
+    "title": "Smoke test",
+    "value": ""
+  }, {
+    "id": 41,
+    "title": "Debug test",
+    "value": ""
+  }, {
+    "id": 73,
+    "title": "Performance test",
+    "value": "",
+    "values": [{
+      "id": 345,
+      "title": "Maxperf",
+      "value": "",
+      "values": [ {
+        "id": 230,
+        "title": "Percent",
+        "values": [{
+          "id": 234,
+          "title": "200",
+          "value": ""
+        }, {
+          "id": 653,
+          "title": "300",
+          "value": ""
+        }]
+      }]
+    }, {
+      "id": 110,
+      "title": "Stability test",
+      "value": "",
+      "values": [ {
+        "id": 261,
+        "title": "Percent",
+        "values": [{
+          "id": 238,
+          "title": "160",
+          "value": ""
+        }, {
+          "id": 690,
+          "title": "240",
+          "value": ""
+        }]
+      }]
+    }]
+  }, {
+    "id": 122,
+    "title": "Security test",
+    "value": "",
+    "values": [{
+      "id": 5321,
+      "title": "Confidentiality",
+      "value": ""
+    }, {
+      "id": 5322,
+      "title": "Integrity",
+      "value": ""
+    }]
+  }]
+}
