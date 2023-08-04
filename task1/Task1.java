@@ -3,23 +3,40 @@ package task1;
 public class Task1 {
     public static void main(String[] args) {
         if (args.length != 2) {
-            System.err.println("Incorrect number of arguments. Usage: java Task1 arg0 arg1");
+            System.out.println("Usage: java Task1.java <n> <m>");
+            return;
         }
 
         int n = Integer.parseInt(args[0]);
         int m = Integer.parseInt(args[1]);
-        int arrayOfNums[] = new int[n];
 
-        for (int i = 1; i <= n; i++) {
-            arrayOfNums[i - 1] = i;
+        if (n <= 0 || m <= 0) {
+            System.out.println("Error: Both n and m should be greater than 0.");
+            return;
         }
 
-        int index = 0;
-        int elems[] = new int[n / m];
+        int[] arrayOfNums = new int[n * m];
+        int count = 1;
+        int currentIndex = 1;
+        System.out.print(currentIndex);
 
-        for (int i = 0; i < n / m; i++) {
-            elems[i] = arrayOfNums[index];
-            index = (index + m) % n;
+        for (int i = 0; i < arrayOfNums.length - 1; i++) {
+            if ((i + 1) % m == 0) {
+                if (count == 1) {
+                    break;
+                }
+                System.out.print(count);
+                arrayOfNums[i] = count;
+                i++;
+            }
+            if (count == n) {
+                arrayOfNums[i] = n;
+                count = 1;
+            } else {
+                arrayOfNums[i] = count;
+                count++;
+            }
         }
+        System.out.println();
     }
 }
