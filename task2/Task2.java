@@ -12,7 +12,7 @@ public class Task2 {
         }
 
         String fileName1 = args[0];
-        String pointsFileName = args[1];
+        String fileName2 = args[1];
 
         try {
             BufferedReader circleReader = new BufferedReader(new FileReader(fileName1));
@@ -22,7 +22,7 @@ public class Task2 {
             float circleRadius = Float.parseFloat(circleReader.readLine());
             circleReader.close();
 
-            BufferedReader pointsReader = new BufferedReader(new FileReader(pointsFileName));
+            BufferedReader pointsReader = new BufferedReader(new FileReader(fileName2));
             String pointStr;
             while ((pointStr = pointsReader.readLine()) != null) {
                 float pointX = Float.parseFloat(pointStr.split(" ")[0]);
