@@ -43,6 +43,30 @@ public class Task4 {
     }
 
     private static int findMinimum(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
 
+        int moves = 0;
+        int median = medianOfNums(nums);
+
+        for (int number : nums) {
+            moves += Math.abs(number - median);
+        }
+
+        return moves;
+    }
+
+    private static int medianOfNums(int[] nums) {
+        int size = nums.length;
+
+        if (size % 2 == 0) {
+            int index = size / 2;
+            int index2 = index - 1;
+            return (nums[index] + nums[index2]) / 2;
+        } else {
+            int index3 = size / 2;
+            return nums[index3];
+        }
     }
 }
